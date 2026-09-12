@@ -1,14 +1,11 @@
-from password_generator import generate_password
-from password_generator import check_password
+from password_generator import check_password, generate_password
 
-print(generate_password(length=8, seed=1))
-print(generate_password(length=12, seed=123))
-print(generate_password(length=12, seed=123, use_special=True))
-print(generate_password(length=8, seed=1, use_uppercase=False, use_digits=False))
-print(generate_password(length=-3, seed=42))
+print("== Генерация паролей ==")
+print("буквы и цифры:   ", generate_password(length=12, seed=123))
+print("со спецсимволами:", generate_password(length=16, seed=7, use_special=True))
 
-print(check_password("abc"))
-print(check_password("abcdefgh"))
-print(check_password("abcdef1234"))
-print(check_password("Abcdef1234"))
-print(check_password("Abcdef123!"))
+print()
+print("== Проверка надёжности ==")
+print("abc        ->", check_password("abc"))
+print("abcdef1234 ->", check_password("abcdef1234"))
+print("Abcdef123! ->", check_password("Abcdef123!"))
