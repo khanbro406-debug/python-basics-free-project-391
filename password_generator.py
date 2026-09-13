@@ -36,7 +36,7 @@ def check_password(password):
     for char in password:
         if char in UPPERCASE:
             has_upper = True
-        break
+            break
     if has_upper:
         score += 1
     has_digit = False
