@@ -5,7 +5,7 @@ SPECIAL = "!@#$%^&*"
 def next_random(number):
     return (16807 * number) % 2147483647
 
-def generate_password(length, seed, use_uppercase=False,use_digits=True, use_special=False):
+def generate_password(length, seed, use_uppercase=True,use_digits=True, use_special=False):
     alphabet = LOWERCASE
     if use_uppercase:
         alphabet += UPPERCASE
