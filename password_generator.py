@@ -58,8 +58,8 @@ def check_password(password):
     elif score == 3:
         verdict = "Средний"
     elif score == 4:
-        verdict = "Надежный"
+        verdict = "Надёжный"
     else:
-        verdict = "Очень надежный"
+        verdict = "Очень надёжный"
     return f"{verdict} пароль (оценка {score} из 5)"
     
